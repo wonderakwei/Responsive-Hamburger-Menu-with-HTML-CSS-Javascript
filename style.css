@@ -1,0 +1,100 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: darkblue;
+    color: white;
+    font-size: 16px;
+}
+
+/* Wrapper Styling */
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Menu Toggle Styling */
+.menu-toggle {
+    float: right;
+    height: 30px;
+    width: 40px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Hamburger Menu Icon */
+.menulogo {
+    background-color: snow;
+    height: 4px;
+    width: 30px;
+    border-radius: 2px;
+}
+
+/* Navigation Menu */
+.menu {
+    background-color: slateblue;
+    width: 75%;
+    height: 100vh;
+    padding: 50px;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition: left 0.5s ease-in-out;
+}
+
+.menu.showmenu {
+    left: 0;
+}
+
+.menu ul {
+    list-style-type: none;
+}
+
+.menu li {
+    border-bottom: 1px solid rgb(130, 117, 218);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.menu li:last-child {
+    border-bottom: none;
+}
+
+.menu li a {
+    color: snow;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    transition: color 0.3s ease-in-out;
+}
+
+.menu li a:hover {
+    color: lightgray;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (min-width: 1000px) {
+    .menu {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .menu {
+        width: 80%;
+    }
+
+    .menu li a {
+        font-size: 16px;
+    }
+}
